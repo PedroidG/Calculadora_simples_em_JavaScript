@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: white;
+}
+
+h1 {
+    padding: 10px;
+    margin: 10px;
+
+    font-size: 26px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-variant: small-caps;
+    font-weight: bold;
+
+    text-align: center;
+    text-decoration: underline;
+}
+
+div {
+    padding: 10px;
+    margin: 10px auto;
+
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-variant: small-caps;
+    font-weight: bold;
+
+    text-align: center;
+
+    max-width: 500px;
+}
+
+div.pista{
+    background-color:  chocolate;
+
+    border: 1px solid black;
+    border-radius: 5px;
+}   
+
+div.pista02 {
+    background-color: chocolate;
+
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+input {
+    padding: 5px;
+    margin: 5px;
+}
+
+footer {
+    background-color: black;
+    color: white;
+
+    padding: 5px;
+    margin: 10px auto;
+
+    text-align: center;
+
+    max-width: 750px;
+}

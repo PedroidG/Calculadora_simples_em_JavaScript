@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora simples com javascript</title>
+
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        h1{
+            font-size: 22px;
+            font-variant: small-caps;
+            font-family: Arial, Helvetica, sans-serif;
+            text-decoration: underline;
+
+            padding: 10px;
+            margin: 10px;
+            
+        }
+
+        div#res{
+            background-color: lightblue;
+
+            border: 1px solid black;
+            border-radius: 5px;
+
+            padding: 10px;
+            margin: 10px;
+
+            font-size: 24px;
+            font-weight: bold;
+            font-variant: small-caps;
+            font-family: Arial, Helvetica, sans-serif;
+
+            color: black;
+        }
+
+        input{
+            border-radius: 10px;
+
+            padding: 10px;
+            margin: 10px;
+        }
+
+        footer{
+
+            background-color: black;
+            color: white;
+
+            text-align: center;
+
+            padding: 5px;
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora simples utilizando JavaScript!</h1>
+    <input type="number" name="txtn1" id="txtn1"> + 
+    <input type="number" name="txtn2" id="txtn2">
+    <input class="botao" type="button" value="Somar" onclick="somar()">
+    <input class="botao" type="button" value="Subtrair" onclick="subtrair()">
+    <input class="botao" type="button" value="Multiplicar" onclick="multiplicar()">
+    <input class="botao" type="button" value="Dividir" onclick="dividir()">
+    <div id="res">Resultado: </div>
+    <footer>
+        <p>Desenvolvido por Pedro Perazza</p>
+    </footer>
+
+    <script>
+        function somar(){
+        var tn1 = window.document.getElementById('txtn1')
+        var tn2 = window.document.getElementById('txtn2')
+        var res = window.document.getElementById('res')
+        var n1 = Number(tn1.value)
+        var n2 = Number(tn2.value)
+        var s = n1 + n2
+        res.innerHTML = `A soma dos valores ${n1} e ${n2} é igual a: ${s}`
+        }
+        function subtrair(){
+        var tn1 = window.document.getElementById('txtn1')
+        var tn2 = window.document.getElementById('txtn2')
+        var res = window.document.getElementById('res')
+        var n1 = Number(tn1.value)
+        var n2 = Number(tn2.value)
+        var s = n1 - n2
+        res.innerHTML = `A subtração dos valores ${n1} e ${n2} é igual a: ${s}`
+        }
+        function multiplicar(){
+        var tn1 = window.document.getElementById('txtn1')
+        var tn2 = window.document.getElementById('txtn2')
+        var res = window.document.getElementById('res')
+        var n1 = Number(tn1.value)
+        var n2 = Number(tn2.value)
+        var s = n1 * n2
+        res.innerHTML = `A multiplicação dos valores ${n1} e ${n2} é igual a: ${s}`
+        }
+        function dividir(){
+        var tn1 = window.document.getElementById('txtn1')
+        var tn2 = window.document.getElementById('txtn2')
+        var res = window.document.getElementById('res')
+        var n1 = Number(tn1.value)
+        var n2 = Number(tn2.value)
+        var s = n1 / n2
+        res.innerHTML = `A divisão dos valores ${n1} e ${n2} é igual a: ${s}`
+        }
+    </script>
+</body>
+</html>

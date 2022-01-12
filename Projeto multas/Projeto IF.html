@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sistema de multas</title>
+</head>
+<body>
+    <h1>Sistema de multas</h1>
+    <div class="pista">
+        <p>Pista 1 com excesso de velocidade de 60Km/h.
+        </p>
+        <input type="text" name="txt" id='txt'> Km/h
+        <input type="button" value="Ver se tomei multa" onclick='calcular()'>
+        <div id='res'>Resultado</div>
+    </div>
+    <div class="pista02">
+        <p>Pista 2 com excesso de velocidade de 120Km/h.
+        </p>
+        <input type="text" name="txt2" id="txt2">
+        <input type="button" value="Ver se tomei multa" onclick="calcular2()">
+        <div id="res2">Resultado</div>
+    </div>
+    
+    <footer>
+        <p>Desenvolvido por Pedro Perazza</p>
+    </footer>
+
+    <script>
+        function calcular(){
+            var txt = document.getElementById('txt')
+            var vel = Number(txt.value)
+            var res = document.getElementById('res')
+            res.innerHTML = `<p>Sua velocidade é de <strong>${vel}</strong>Km/h</p>`
+            res.style.border = '2px solid'
+            res.style.borderRadius = '5px'
+            res.style.backgroundColor = 'rgb(233, 117, 34)'
+            if (vel > 60) {
+                res.innerHTML += '<p>Você foi multado por excesso de velocidade na pista!</p>'
+            }
+            res.innerHTML += `<p>Dirija com segurança!</p>`
+        }
+        function calcular2(){
+            var txt2 = document.getElementById('txt2')
+            var velo = Number(txt2.value)
+            var resu = document.getElementById('res2')
+            res2.innerHTML = `<p>Sua velocidade é de ${velo}Km/h</p>`
+            res2.style.border = '2px solid'
+            res2.style.borderRadius = '5px'
+            res2.style.backgroundColor = 'rgb(233, 117, 34)'
+            if (velo > 120) {
+                res2.innerHTML += '<p>Você foi multado por excesso de velocidade na pista!</p>'
+            }
+            res2.innerHTML += '<p>Dirija com segurança!</p>'
+        }
+    </script>
+</body>
+</html>
